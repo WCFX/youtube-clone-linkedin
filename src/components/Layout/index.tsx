@@ -12,12 +12,12 @@ const Layout: React.FC = () => {
   return(
     <Container>
       <MobileHeader />
-      
+
 
       <main>
         <LeftColumn />
-        <RightColumn />
         <MiddleColumn />
+        <RightColumn />
       </main>
     </Container>  
   )

@@ -31,6 +31,13 @@ export const SearchInput = styled.input`
   color: var(--color-black);
   font-size: 14px;
   padding: 7.5px 8px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+
+  &:focus {
+    background: var(--color-white);
+  }
 `;
 export const MessageIcon = styled(FiMessageSquare)`
   height: 24px;
