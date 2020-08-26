@@ -6,27 +6,31 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  html, body, #root {
-    height: 100%;
-    width: 100%;
-    background: var(--color-background);
+  html {
+    min-height: 100%;
+    background: var(--primary);
   }
   *, button, input {
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+    border: 0;
+    background: none;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    color: var(--black);
+
+    transition: color .2s ease-out;
+  }
+  ul {
+    list-style: none;
   }
   :root {
-    --color-header: #283e4a;
-    --color-linkedin: #0077b5;
-    --color-input: #e1e9ee;
-    --color-icons: #c7d1d8;
-    --color-hashtag: #7a8b98;
-    --color-background: #f5f5f5;
-    --color-ad-text: #434649;
-    --color-panel: #fff;
-    --color-link: #0073b1;
-    --color-black: rgba(0,0,0,.9);
-    --color-gray: rgba(0,0,0,.6);
-    --color-separator: rgba(0,0,0,0.15);
-    --color-white: #fff;
+    ${(props) => {
+      const theme = props.theme;
+
+      let append = '';
+      Object.entries(theme).forEach(([prop, value]) => {
+        append += `--${prop}: ${value};`;
+      });
+
+      return append;
+    }}
   }
 `;
