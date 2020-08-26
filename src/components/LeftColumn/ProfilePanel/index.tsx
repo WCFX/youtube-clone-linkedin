@@ -10,22 +10,22 @@ const ProfilePanel: React.FC = () => {
       <Container>
         <div className="profile-cover"></div>
         <img
-          src="https://github.com/guilhermerodz.png"
+          src="https://avatars0.githubusercontent.com/u/66399640?v=4"
           alt="Avatar"
           className="profile-picture"
         />
-        <h1>Guilherme Rodz</h1>
-        <h2>Software Engineer @ Rocketseat</h2>
+        <h1>Wagner Barboza</h1>
+        <h2>Software Engineer &copy; WCFX</h2>
 
         <div className="separator"></div>
 
         <div className="key-value">
           <span className="key">Quem viu seu perfil</span>
-          <span className="value">1.558</span>
+          <span className="value">18.699</span>
         </div>
         <div className="key-value">
           <span className="key">Viram sua publicação</span>
-          <span className="value">388</span>
+          <span className="value">33.699</span>
         </div>
       </Container>
     </Panel>
